@@ -8,45 +8,45 @@ t0 = 0;
 y0 = [-1; 1];
 tFinal =  20;
 N = 100;
-dt = (tFinal-t0)/N;
 
-% TODO: Solve using Euler method
+% Solve using Euler method
+[EulerSolutionx, EulerSolutiony] = ODEMethodSolver(Fdot, [t0 tFinal], y0, N, "Euler");
 
-% TODO: Solve using Euler improved
 
-% TODO: Solve using RK4
-RK4Solution = zeros(3, N);
+% Solve using Euler improved
+[EulerImprovedSolutionx, EulerImprovedSolutiony] = ODEMethodSolver(Fdot, [t0 tFinal], y0, N, "Euler Improved");
 
-RK4Solution(:, 1) = [t0; y0];
-
-for i = 2:N
-    [RK4Solution(1, i), RK4Solution(2:3, i)] = RK4Step(Fdot, RK4Solution(1, i-1), RK4Solution(2:end, i-1), dt);
-end
+% Solve using RK4
+[RK4Solutionx, RK4Solutiony] = ODEMethodSolver(Fdot, [t0 tFinal], y0, N, "RK4");
 
 % TODO: Solve using RKF
 
-% TODO: Solve using ode45
+% Solve using ode45
 [ODE45Solutionx, ODE45Solutiony] = ode45(Fdot, linspace(t0, tFinal, N), y0);
 
 
-% TODO: Plot all results
+% Plot all results
 figure;
 hold on
-plot(RK4Solution(1,:), RK4Solution(2,:));
+plot(EulerSolutionx, EulerSolutiony(1,:));
+plot(EulerImprovedSolutionx, EulerImprovedSolutiony(1,:));
+plot(RK4Solutionx, RK4Solutiony(1,:));
 plot(ODE45Solutionx, ODE45Solutiony(:, 1));
 grid on
 xlabel("t")
 ylabel("y_1")
-legend("RK4", "ODE45")
+legend("Euler", "Euler Improved", "RK4", "ODE45")
 hold off
 
 
 figure;
 hold on
-plot(RK4Solution(1,:), RK4Solution(3,:));
+plot(EulerSolutionx, EulerSolutiony(2,:));
+plot(EulerImprovedSolutionx, EulerImprovedSolutiony(2,:));
+plot(RK4Solutionx, RK4Solutiony(2,:));
 plot(ODE45Solutionx, ODE45Solutiony(:, 2));
 grid on
 xlabel("t")
 ylabel("y_2")
-legend("RK4", "ODE45")
+legend("Euler", "Euler Improved", "RK4", "ODE45")
 hold off
