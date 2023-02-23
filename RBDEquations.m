@@ -1,4 +1,4 @@
-function [Xdot] = RDBEquations(F, L, X, Inertia, m)
+function [Xdot] = RBDEquations(F, L, X, Inertia, m)
 %RBDEquations This function calculates values of RBD differential equations.
 %Call    :[Xdot] = RBDEquations(F, L, X, I, M)
 %Inputs
