@@ -1,10 +1,11 @@
-function ReadDerivatives(Aircraft)
+function ReadDerivatives(Aircraft, FC)
 %ReadDerivatives This function reads derivatives from excel file and put
 %                these variables into workspace, all units are according
 %                excel sheet.
 %Call        : ReadDerivatives(Aircraft)
 %Inputs
 % Aircraft   : name for aircraft to read its derivatives
+% FC         : flight condition
 %Outputs
 %            : It does not output variables directly, but instead it puts
 %              variables into workspace like: 
@@ -28,7 +29,7 @@ filename = strcat('.\Derivatives\', Aircraft, '.xlsx');
 
 % check if file exists
 if(exist(filename))
-    d = xlsread(filename, "5", "B1:B61");
+    d = xlsread(filename, num2str(FC), "B1:B61");
     
     dt      = d(1);
     tFinal  = d(2);
@@ -77,10 +78,14 @@ if(exist(filename))
     
     assignin("base", "m", m)
     assignin("base", "g", g)
+    assignin("base", "Vto", Vto)
     
     assignin("base", "Ixx", Ixx);
     assignin("base", "Iyy", Iyy);
     assignin("base", "Izz", Izz);
+    assignin("base", "Ixz", Ixz);
+    assignin("base", "Iyz", Iyz);
+    assignin("base", "Ixy", Ixy);
     assignin("base", "I", I);
     
     assignin("base", "dC", dC)

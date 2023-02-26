@@ -4,7 +4,7 @@ close all
 clear AirframeModel
 
 %% Read Derivatives
-ReadDerivatives("boeing747");
+ReadDerivatives("boeing747", 2);
 
 %% define roblem
 
@@ -36,7 +36,7 @@ MDE  = LongDrv(13);
 XDTH = LongDrv(14);
 ZDTH = LongDrv(15);
 MDTH = LongDrv(16);
-
+XQ = 0;
 
 % Lateral Derivatives
 YP  = 0;
@@ -55,6 +55,9 @@ LDA = LatDrv(11);
 NDA = LatDrv(12);
 LDR = LatDrv(13);
 NDR = LatDrv(14);
+LB = LV * Vto;
+NB = NV * Vto;
+
 
 % Initial values
 U0 = X0(1);
@@ -63,6 +66,9 @@ W0 = X0(3);
 P0 = X0(4);
 Q0 = X0(5);
 R0 = X0(6);
+phi0   = X0(7);
+theta0 = X0(8);
+psi0   = X0(9);
 WD0 = 0;
 Wprev = W0;
 
@@ -100,5 +106,9 @@ for i = 2:N
     X(:, i) = RK4Step(X(:, i-1), F, M, m, I, dt);
 end
 
+%% Linearized equations
+run('LinearizedEquations')
+
 %% Plot graphs
-NLSimPlotGraphs(t, X);
+%NLSimPlotGraphs(t, X);
+run('LinearizedEquationsPlot')
