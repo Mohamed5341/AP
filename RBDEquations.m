@@ -1,4 +1,4 @@
-function [Xdot] = RBDEquations(F, L, X, Inertia, m)
+function [Xdot] = RBDEquations(F, L, X, I, m)
 %RBDEquations This function calculates values of RBD differential equations.
 %Call    :[Xdot] = RBDEquations(F, L, X, I, M)
 %Inputs
@@ -13,7 +13,8 @@ function [Xdot] = RBDEquations(F, L, X, Inertia, m)
 
 % TODO: You need to check if input is a valid inputs
 
-g = 9.81;
+
+g = evalin("base", "g");
 Xdot = zeros(12, 1);
 
 RotMatrix = [cos(X(8))*cos(X(9)),sin(X(7))*sin(X(8))*cos(X(9))-cos(X(7))*sin(X(9)),cos(X(7))*sin(X(8))*cos(X(9))+sin(X(7))*sin(X(9));
@@ -24,7 +25,7 @@ RotMatrix = [cos(X(8))*cos(X(9)),sin(X(7))*sin(X(8))*cos(X(9))-cos(X(7))*sin(X(9
 Xdot(1:3) = (F + m*transpose(RotMatrix)*[0;0;g])/m - cross(X(4:6), X(1:3));
 
 % angular velocities 
-Xdot(4:6) = inv(Inertia)*(L - cross(X(4:6), Inertia*X(4:6)));
+Xdot(4:6) = inv(I)*(L - cross(X(4:6), I*X(4:6)));
 
 % angles
 Xdot(7:9) = [ 1, sin(X(7))*tan(X(8)), cos(X(7))*tan(X(8));
