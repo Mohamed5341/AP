@@ -33,13 +33,13 @@ Here, we have input is **Thrust** and output is velocity.
 
 Here is gain values
 
-| Aircraft  | Flight Condition | Gain Name | Gain Value |
-| :-------: | :--------------: | :-------: | :--------: |
-| Boeing747 |        2         |   $K_P$   |  767.1819  |
-|           |                  |   $K_I$   |  13.7790   |
-|           |                  |   $K_D$   |   2184.6   |
-|           |                  | $K_{ZD}$  |    0.1     |
-|           |                  | $K_{PD}$  |   0.1454   |
+| Aircraft  | Flight Condition |     Gain Name     | Gain Value |
+| :-------: | :--------------: | :---------------: | :--------: |
+| Boeing747 |        2         |       $K_P$       |   129.86   |
+|           |                  | $\frac{K_I}{K_P}$ |  0.08971   |
+|           |                  |       $K_D$       |   23265    |
+|           |                  |     $K_{ZD}$      |    0.1     |
+|           |                  |     $K_{PD}$      |   1.831    |
 
 # Altitude Controller
 
