@@ -1,7 +1,6 @@
 clc
 clearvars
 close all
-clear AirframeModel
 
 %% Read Derivatives
 ReadDerivatives("boeing747", 2);
@@ -116,4 +115,7 @@ run('LinearizedEquations')
 %run('LinearizedEquationsPlot')
 
 %% Export design transfer functions
-run('DesignTransferFunctions')
+servo = tf(10,[1 10]);
+integrator = tf(1,[1 0]);
+differentiator = tf([1 0],1);
+engine_timelag = tf(0.1 , [1 0.1]);

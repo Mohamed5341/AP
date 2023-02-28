@@ -14,11 +14,11 @@ Here we have input is **Elevator** and output is **Pitch Angle**. Adding control
 
 Here is gain values
 
-| Aircraft  | Flight Condition | Gain Name | Gain Value |
-| :-------: | :--------------: | :-------: | :--------: |
-| Boeing747 |        2         |   $K_P$   |   1.9341   |
-|           |                  |   $K_I$   |   1.0704   |
-|           |                  |   $K_D$   |   2.0388   |
+| Aircraft  | Flight Condition |     Gain Name     | Gain Value |
+| :-------: | :--------------: | :---------------: | :--------: |
+| Boeing747 |        2         |       $K_P$       |   1.631    |
+|           |                  | $\frac{K_I}{K_P}$ |   0.6421   |
+|           |                  |       $K_D$       |   1.4495   |
 
 
 # Velocity Controller
@@ -40,6 +40,24 @@ Here is gain values
 |           |                  |   $K_D$   |   2184.6   |
 |           |                  | $K_{ZD}$  |    0.1     |
 |           |                  | $K_{PD}$  |   0.1454   |
+
+# Altitude Controller
+
+Here is block diagrams
+
+![Altitude Block Diagram](../Images/AltitudeBD.svg)
+
+Here, we have input is **Pitch Angle** and output is **Altitude**.
+
+![Altitude Controller](../Images/AltitudeController.svg)
+
+Here is gain values
+
+| Aircraft  | Flight Condition | Gain Name | Gain Value |
+| :-------: | :--------------: | :-------: | :--------: |
+| Boeing747 |        2         |   $K_P$   |   1.631    |
+|           |                  |   $K_I$   | 1.9777e-5  |
+|           |                  |   $K_D$   |   0.0023   |
 
 # Control Gains
 
