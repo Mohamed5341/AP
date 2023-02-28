@@ -53,19 +53,8 @@ Here, we have input is **Pitch Angle** and output is **Altitude**.
 
 Here is gain values
 
-| Aircraft  | Flight Condition | Gain Name | Gain Value |
-| :-------: | :--------------: | :-------: | :--------: |
-| Boeing747 |        2         |   $K_P$   |   1.631    |
-|           |                  |   $K_I$   | 1.9777e-5  |
-|           |                  |   $K_D$   |   0.0023   |
-
-# Control Gains
-
-Here is all control gains for all control loops.
-
-| Control Loop |         Input         |  output  | Gain name | Gain value |
-| :----------: | :-------------------: | :------: | :-------: | :--------: |
-|    Pitch     | $\theta_{\text{com}}$ | $\theta$ |           |            |
-|              |                       |          |    KP     |   1.9341   |
-|              |                       |          |    KI     |   1.0704   |
-|              |                       |          |    KD     |   2.0388   |
+| Aircraft  | Flight Condition |     Gain Name     | Gain Value |
+| :-------: | :--------------: | :---------------: | :--------: |
+| Boeing747 |        2         |       $K_P$       | 0.00082979 |
+|           |                  | $\frac{K_I}{K_P}$ |   0.1388   |
+|           |                  |       $K_D$       | 0.0013795  |
