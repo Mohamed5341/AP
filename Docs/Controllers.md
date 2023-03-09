@@ -88,7 +88,7 @@ Here is block diagrams
 
 Here, we have input is **Aliron Angle** required and output is **roll angle**.
 
-![Yaw Controller](../Images/RollController.svg)
+![roll Controller](../Images/RollController.svg)
 
 Here is gain values
 
@@ -96,3 +96,13 @@ Here is gain values
 | :-------: | :--------------: | :-------: | :--------: |
 | Boeing747 |        2         |   $K_D$   |   0.5255   |
 |           |                  |   $K_P$   |  4.0438   |
+
+# Coordination
+
+To achieve coordination, adding controller over yaw angle, from equilibruim equations get the final formula for controller.
+
+![Coordination Controller](../Images/coordinationController.svg)
+
+| Aircraft  | Flight Condition | Gain Name | Gain Value |
+| :-------: | :--------------: | :-------: | :--------: |
+| Boeing747 |        -         |  $\tau$   |     15     |
