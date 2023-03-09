@@ -58,3 +58,24 @@ Here is gain values
 | Boeing747 |        2         |       $K_P$       | 0.00082979 |
 |           |                  | $\frac{K_I}{K_P}$ |   0.1388   |
 |           |                  |       $K_D$       | 0.0013795  |
+
+
+# Yaw Damper Controller
+
+Here is block diagrams
+
+![Yaw Block Diagram](../Images/YawBD.svg)
+
+Here, we have input is **roll rate** and output is **roll**.
+
+![Yaw Controller](../Images/YawController.svg)
+
+Here is gain values
+
+| Aircraft  | Flight Condition | Gain Name | Gain Value |
+| :-------: | :--------------: | :-------: | :--------: |
+| Boeing747 |        2         |   $K_D$   |   2.0089   |
+|           |                  |   $K_W$   |  0.09856   |
+
+
+**Note**: washout here acts as high pass filter. which passes only high frequencies, this makes control over oscillations only. 
