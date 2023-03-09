@@ -79,3 +79,20 @@ Here is gain values
 
 
 **Note**: washout here acts as high pass filter. which passes only high frequencies, this makes control over oscillations only. 
+
+# Roll Controller
+
+Here is block diagrams
+
+![Roll Block Diagram](../Images/RollBD.svg)
+
+Here, we have input is **Aliron Angle** required and output is **roll angle**.
+
+![Yaw Controller](../Images/RollController.svg)
+
+Here is gain values
+
+| Aircraft  | Flight Condition | Gain Name | Gain Value |
+| :-------: | :--------------: | :-------: | :--------: |
+| Boeing747 |        2         |   $K_D$   |   0.5255   |
+|           |                  |   $K_P$   |  4.0438   |
