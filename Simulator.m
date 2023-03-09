@@ -3,7 +3,12 @@ clearvars
 close all
 
 %% Read Derivatives
-ReadDerivatives("boeing747", 2);
+
+Aircraft = "boeing747";
+FC = 2;
+
+run("ReadDerivatives");
+%ReadDerivatives("boeing747", 2);
 
 %% define roblem
 
@@ -16,60 +21,7 @@ t = t0:dt:tFinal;
 X = zeros(length(X0), N);
 X(:,1) = X0;
 
-%% Derivatives
 
-% Longitudinal derivatives
-XU   = LongDrv(1);
-ZU   = LongDrv(2);
-MU   = LongDrv(3);
-XW   = LongDrv(4);
-ZW   = LongDrv(5);
-MW   = LongDrv(6);
-ZWD  = LongDrv(7);
-ZQ   = LongDrv(8);
-MWD  = LongDrv(9);
-MQ   = LongDrv(10);
-XDE  = LongDrv(11);
-ZDE  = LongDrv(12);
-MDE  = LongDrv(13);
-XDTH = LongDrv(14);
-ZDTH = LongDrv(15);
-MDTH = LongDrv(16);
-XQ = 0;
-
-% Lateral Derivatives
-YP  = 0;
-YR  = 0;
-YV  = LatDrv(1);
-YB  = LatDrv(2);
-LV  = LatDrv(3);
-NV  = LatDrv(4);
-LP  = LatDrv(5);
-NP  = LatDrv(6);
-LR  = LatDrv(7);
-NR  = LatDrv(8);
-YDA = LatDrv(9);
-YDR = LatDrv(10);
-LDA = LatDrv(11);
-NDA = LatDrv(12);
-LDR = LatDrv(13);
-NDR = LatDrv(14);
-LB = LV * Vto;
-NB = NV * Vto;
-
-
-% Initial values
-U0 = X0(1);
-V0 = X0(2);
-W0 = X0(3);
-P0 = X0(4);
-Q0 = X0(5);
-R0 = X0(6);
-phi0   = X0(7);
-theta0 = X0(8);
-psi0   = X0(9);
-WD0 = 0;
-Wprev = W0;
 
 %% Solving nonlinear
 
