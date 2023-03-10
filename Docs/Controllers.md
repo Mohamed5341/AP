@@ -1,6 +1,17 @@
 # Controllers
 
-Controlling this system uses multiple control loop, each loop has one input and one output.
+Control here is over two things **Altitude**(longitudinal) and **Yaw Angle**(lateral). This is done by using multiple control loop, each loop has one input and one output.
+
+![NL Simulator blocks](../Images/NLSimBD.svg)
+
+1. Longitudinal 
+   1. [Pitch controller](#pitch-controller)
+   2. [Velocity controller](#velocity-controller)
+   3. [Altitude controller](#altitude-controller)
+2. Lateral
+   1. [Yaw Damper controller](#yaw-damper-controller)
+   2. [Roll controller](#roll-controller)
+   3. [Yaw controller](#coordination)
 
 # Pitch Controller
 
