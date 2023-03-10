@@ -55,9 +55,9 @@ Here is gain values
 
 | Aircraft  | Flight Condition |     Gain Name     | Gain Value |
 | :-------: | :--------------: | :---------------: | :--------: |
-| Boeing747 |        2         |       $K_P$       | 0.00082979 |
-|           |                  | $\frac{K_I}{K_P}$ |   0.1388   |
-|           |                  |       $K_D$       | 0.0013795  |
+| Boeing747 |        2         |       $K_P$       | 0.00092474 |
+|           |                  | $\frac{K_I}{K_P}$ |  0.02901   |
+|           |                  |       $K_D$       | 0.00027689 |
 
 
 # Yaw Damper Controller
@@ -74,8 +74,8 @@ Here is gain values
 
 | Aircraft  | Flight Condition | Gain Name | Gain Value |
 | :-------: | :--------------: | :-------: | :--------: |
-| Boeing747 |        2         |   $K_D$   |   2.0089   |
-|           |                  |   $K_W$   |  0.09856   |
+| Boeing747 |        2         |   $K_D$   |   3.0936   |
+|           |                  |   $K_W$   |    0.2     |
 
 
 **Note**: washout here acts as high pass filter. which passes only high frequencies, this makes control over oscillations only. 
