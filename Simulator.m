@@ -8,7 +8,6 @@ Aircraft = "boeing747";
 FC = 2;
 
 run("ReadDerivatives");
-%ReadDerivatives("boeing747", 2);
 
 %% define roblem
 
