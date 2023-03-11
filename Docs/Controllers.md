@@ -89,7 +89,7 @@ Here is gain values
 |           |                  |   $K_W$   |    0.2     |
 
 
-**Note**: washout here acts as high pass filter. which passes only high frequencies, this makes control over oscillations only. 
+**Note**: washout[$^{[1]}$](#references)[$^{[2]}$](#references) here acts as high pass filter. which passes only high frequencies, this makes control over oscillations only. 
 
 # Roll Controller
 
@@ -110,10 +110,16 @@ Here is gain values
 
 # Coordination
 
-To achieve coordination, adding controller over yaw angle, from equilibruim equations get the final formula for controller.
+To achieve coordination[$^{[2]}$](#references), adding controller over yaw angle, from equilibruim equations get the final formula for controller.
 
 ![Coordination Controller](../Images/coordinationController.svg)
 
 | Aircraft  | Flight Condition | Gain Name | Gain Value |
 | :-------: | :--------------: | :-------: | :--------: |
 | Boeing747 |        -         |  $\tau$   |     15     |
+
+# References
+
+[1] Etkin, B., &amp; Reid, L. D. (1996). Dynamics of flight: Stability and control. Wiley. 
+
+[2] MIT Course (Aircraft Stability And Control) notes ([link](https://ocw.mit.edu/courses/16-333-aircraft-stability-and-control-fall-2004/))

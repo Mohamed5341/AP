@@ -22,4 +22,14 @@ https://user-images.githubusercontent.com/52247487/224458156-379225a1-b412-433c-
 
 # References
 
-<!--add refernces-->
+[1] Course Tutorials [Arabic] ([link](https://youtube.com/playlist?list=PL1YGQ3yUkoJliWU0N8XPtA-jS682yt8_r))
+
+[2] Etkin, B., &amp; Reid, L. D. (1996). Dynamics of flight: Stability and control. Wiley. 
+
+[3] Nelson, R. C. (1998). Flight stability and automatic control. WCB/McGraw Hill. 
+
+[4] Heffley, R. K., & Jewell, W. F. (1972). Aircraft handling qualities data (No. AD-A277031). NASA.
+
+[5] MIT Course (Aircraft Stability And Control) notes ([link](https://ocw.mit.edu/courses/16-333-aircraft-stability-and-control-fall-2004/))
+
+[6] Kreyszig, E. (2010). Advanced Engineering Mathematics, 10th edition. John Wiley &amp; Sons. 

@@ -1,6 +1,6 @@
 # RBD Solution
 
-Solving Rigid Body Dynamics (RBD) equations to get 12 states of body at anytime.
+Solving Rigid Body Dynamics (RBD) equations[$^{[1]}$](#refernces) to get 12 states of body at anytime.
 
 # System States
 
@@ -107,3 +107,7 @@ Results are almost the same, but graphs does not show it accurately, so calculat
 |    z     | 0.135148441779349                  | 0.135344666625455                 |
 
 Results are very small (almost zero), matlab code is too close to simulink values.
+
+# Refernces
+
+[1] Nelson, R. C. (1998). Flight stability and automatic control. WCB/McGraw Hill. 

@@ -1,6 +1,6 @@
 # Linearization
 
-Linearize aircraft equations and get transfer function for 12 states with 4 inputs. System is divided into both longitudinal and lateral equations.
+Linearize aircraft equations[$^{[1]}$](#references) and get transfer function for 12 states with 4 inputs. System is divided into both longitudinal and lateral equations.
 
 # Results
 
@@ -23,3 +23,7 @@ Compare non-linear equations results with linearized equations to see difference
 |              |  ![5 deg delta E](../Images/Linear_r5.svg)   |
 |              | ![10 deg delta E](../Images/Linear_r10.svg)  |
 |              | ![25 deg delta E](../Images/Linear_r25.svg)  |
+
+# References
+
+[1] Nelson, R. C. (1998). Flight stability and automatic control. WCB/McGraw Hill. 

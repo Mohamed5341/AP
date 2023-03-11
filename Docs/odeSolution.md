@@ -1,6 +1,6 @@
 # ODE Numerical Solution
 
-Simulator equations are ODE (ordinary differential euations) and solved using numerical methods. It provides multiple methods for solution:
+Simulator equations are ODE (ordinary differential euations) and solved using numerical methods[$^{[1]}$](#references). It provides multiple methods for solution:
 
 1. Euler
 2. Euler Improved
@@ -43,3 +43,7 @@ using number of points to be 100 point.
 ![Y2 graph](../Images/ode_y2_graph.svg)
 
 Methods are to close in solution.
+
+# References
+
+[1] Kreyszig, E. (2010). Advanced Engineering Mathematics, 10th edition. John Wiley &amp; Sons. 
