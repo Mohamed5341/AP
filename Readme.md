@@ -16,7 +16,9 @@ Using MATLAB, Simulink and Flight Gear.
 
 ## Simple Mission
 
-<!--add link to video-->
+https://user-images.githubusercontent.com/52247487/224458156-379225a1-b412-433c-8d8f-8f1ec0588965.mp4
+
+[YouTube Link](https://youtu.be/QZR4yVgZVtM)
 
 # References
 
