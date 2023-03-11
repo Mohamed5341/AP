@@ -5,7 +5,7 @@ close all
 %% Read Derivatives
 
 Aircraft = "boeing747";
-FC = 5;
+FC = 2;
 
 run("ReadDerivatives");
 
